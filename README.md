@@ -20,7 +20,7 @@ It allows users to create, edit, search, export, import, and print events — al
 
 ## 🖼️ Preview
 
-> ![Evently Screenshot](Preview/preview.png)
+> ![Evently Screenshot](PREVIEW/preview.png)
 > 
 ---
 
@@ -37,7 +37,7 @@ It allows users to create, edit, search, export, import, and print events — al
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/Evently.git
+   git clone https://github.com/shubhamnarware67-cmd/Evently.git
    ```
 2. Navigate into the folder:
    ```bash
