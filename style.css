@@ -1,0 +1,177 @@
+/*
+ * Project: Evently - Ultimate Calendar & Event Manager
+ * Author: Shubham Narware
+ * License: MIT License
+ * GitHub: https://github.com/shubhamnarware67-cmd/Evently
+ * Description: Modern, responsive calendar app with events, themes, export/import, and print support.
+ */
+
+:root{
+  --bg:#141e30;
+  --bg2:#243b55;
+  --card:rgba(255,255,255,.12);
+  --text:#fff;
+  --accent:#00cec9;
+}
+
+body.light{
+  --bg:#f5f6fa;
+  --bg2:#dcdde1;
+  --card:#fff;
+  --text:#2f3640;
+  --accent:#6c5ce7;
+}
+
+/* --- Global Styles --- */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Poppins,sans-serif;
+}
+
+body{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,var(--bg),var(--bg2));
+  color:var(--text);
+}
+
+/* --- Container --- */
+.container{
+  width:420px;
+  background:var(--card);
+  backdrop-filter:blur(18px);
+  border-radius:20px;
+  padding:20px;
+  box-shadow:0 20px 40px rgba(0,0,0,.4);
+}
+
+/* --- Header --- */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+header select{
+  margin-top:6px;
+  padding:4px;
+  border-radius:6px;
+  border:none;
+}
+
+.controls{
+  display:flex;
+  flex-wrap:wrap;
+  gap:4px;
+}
+
+.controls button{
+  border:none;
+  padding:5px 8px;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+.controls span{
+  cursor:pointer;
+}
+
+/* --- Calendar --- */
+.calendar{
+  margin-top:20px;
+}
+
+.weeks, .days{
+  display:flex;
+  flex-wrap:wrap;
+  list-style:none;
+  text-align:center;
+}
+
+.weeks li{
+  width:calc(100% / 7);
+  font-weight:600;
+}
+
+.days li{
+  width:calc(100% / 7);
+  margin-top:20px;
+  cursor:pointer;
+  position:relative;
+}
+
+.days li::before{
+  content:"";
+  position:absolute;
+  height:34px;
+  width:34px;
+  border-radius:50%;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  z-index:-1;
+}
+
+.days li.active::before{
+  background:var(--accent);
+}
+
+.days li.active{
+  color:#fff;
+}
+
+.days li.inactive{
+  opacity:.4;
+}
+
+.event-dot{
+  height:6px;
+  width:6px;
+  background:red;
+  border-radius:50%;
+  margin:4px auto 0;
+}
+
+/* --- Events Section --- */
+.events{
+  margin-top:20px;
+}
+
+.events input{
+  width:100%;
+  padding:8px;
+  border:none;
+  border-radius:8px;
+  margin-top:8px;
+}
+
+.add-event{
+  display:flex;
+  gap:6px;
+  margin-top:10px;
+}
+
+.add-event button{
+  flex:1;
+}
+
+#eventList{
+  list-style:none;
+  margin-top:10px;
+}
+
+#eventList li{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-top:6px;
+}
+
+#eventList button{
+  border:none;
+  cursor:pointer;
+}

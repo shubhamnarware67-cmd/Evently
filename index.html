@@ -1,0 +1,66 @@
+<!--
+  Project: Evently - Ultimate Calendar & Event Manager
+  Author: Shubham Narware
+  License: MIT License
+  GitHub: https://github.com/shubhamnarware67-cmd/Evently
+  Description: A smart, browser-based event manager with light/dark mode, local storage, and import/export.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Evently | Ultimate Calendar App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Shubham Narware">
+  <meta name="description" content="Evently - Modern calendar app with event management, themes, export/import, and printing.">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <div>
+      <h2 class="current-date"></h2>
+      <select id="yearSelect"></select>
+    </div>
+    <div class="controls">
+      <button id="todayBtn">Today</button>
+      <button id="exportBtn">Export</button>
+      <button id="importBtn">Import</button>
+      <button id="printBtn">Print</button>
+      <span id="prev" class="material-symbols-rounded">chevron_left</span>
+      <span id="next" class="material-symbols-rounded">chevron_right</span>
+      <span id="themeToggle" class="material-symbols-rounded">dark_mode</span>
+      <input type="file" id="fileInput" hidden>
+    </div>
+  </header>
+
+  <div class="calendar">
+    <ul class="weeks">
+      <li>Sun</li><li>Mon</li><li>Tue</li><li>Wed</li>
+      <li>Thu</li><li>Fri</li><li>Sat</li>
+    </ul>
+    <ul class="days"></ul>
+  </div>
+
+  <div class="events">
+    <h3 id="selectedDate">Select a date</h3>
+    <input type="text" id="searchEvent" placeholder="Search events...">
+
+    <div class="add-event">
+      <input type="text" id="eventInput" placeholder="Add new event">
+      <button id="addEventBtn">Add</button>
+    </div>
+
+    <ul id="eventList"></ul>
+  </div>
+</div>
+
+</body>
+</html>
